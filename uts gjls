@@ -1,0 +1,68 @@
+#include <iostream>
+using namespace std;
+
+char papan[3][3] = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}}; //Variabel array
+
+char pemainSekarang = 'X';
+
+int main() {
+    int baris, kolom;
+    bool gerakanValid = false;
+    bool permainanSelesai = false;
+	
+	while(!lanjut){
+	    while (!permainanSelesai) {
+	        system("cls"); // Hapus layar
+	
+	        // ---- Buat program tampilkan papan permainan ----
+			// ***Tulis Program disinii
+	
+	        // ---- Buat program untuk memasukkan baris dan kolom Tic tac toe ----
+			// ***Tulis Program disinii
+			
+	        // Program periksa apakah langkah valid
+	        if (baris >= 0 && baris < 3 && kolom >= 0 && kolom < 3 && papan[baris][kolom] == ' ') {
+	            papan[baris][col] = pemainSekarang;
+	            gerakanValid = true;
+	        } else {
+	            cout << "\nSalah !! Ulangi kembali\n";
+	            gerakanValid = false;
+	        }
+	
+	        // Program periksa kemenangan atau seri
+	        if ((papan[0][0] == pemainSekarang && papan[0][1] == pemainSekarang && papan[0][2] == pemainSekarang) ||
+	            (papan[1][0] == pemainSekarang && papan[1][1] == pemainSekarang && papan[1][2] == pemainSekarang) ||
+	            (papan[2][0] == pemainSekarang && papan[2][1] == pemainSekarang && papan[2][2] == pemainSekarang) ||
+	            (papan[0][0] == pemainSekarang && papan[1][0] == pemainSekarang && papan[2][0] == pemainSekarang) ||
+	            (papan[0][1] == pemainSekarang && papan[1][1] == pemainSekarang && papan[2][1] == pemainSekarang) ||
+	            (papan[0][2] == pemainSekarang && papan[1][2] == pemainSekarang && papan[2][2] == pemainSekarang) ||
+	            (papan[0][0] == pemainSekarang && papan[1][1] == pemainSekarang && papan[2][2] == pemainSekarang) ||
+	            (papan[0][2] == pemainSekarang && papan[1][1] == pemainSekarang && papan[2][0] == pemainSekarang)) {
+	            system("cls");
+	            
+	            // ---- Buat program memberitahu kemenangan player dan logika selesai ----
+				// ***Tulis Program disinii
+	
+	        } 
+			else if (papan[0][0] != ' ' && papan[0][1] != ' ' && papan[0][2] != ' ' &&
+	                   papan[1][0] != ' ' && papan[1][1] != ' ' && papan[1][2] != ' ' &&
+	                   papan[2][0] != ' ' && papan[2][1] != ' ' && papan[2][2] != ' ') {
+	            system("cls");
+	            
+	            // --- Buat program memberitahu saat permainan seri dan memberi logika selesai ----
+				// ***Tulis Program disinii
+	        }
+	
+	        // ---- Buat program untuk mengganti pemain ----
+			// ***Tulis Program disinii
+	    }
+	    // ---- Buat program menampilkan skor sementara dari player X dan player O ----
+		// ***Tulis Program disinii
+		
+		// ---- Buat program menanyakan ke pemain apakah akan melanjutkan atau tidak ----
+		// #### Ket : Jika Ya maka permainan akan berlanjut
+		//	 	 	  Jika Tidak maka akan menampilkan skor akhir dari seluruh fase permainan
+		// ***Tulis Program disinii
+	}
+	return 0;
+}
